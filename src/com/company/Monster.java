@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Dinosaur {
+public class Monster {
 
     private int i;
     private int numCarsEaten = 0;
@@ -13,9 +13,13 @@ public class Dinosaur {
     private Car carFromLot;
 
 
-    public Dinosaur(String makesILike){
+    public Monster(String makesILike){
 
         preferredMake = makesILike;
+
+    }
+
+    public Monster(){
 
     }
 

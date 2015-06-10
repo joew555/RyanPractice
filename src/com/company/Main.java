@@ -1,12 +1,10 @@
 package com.company;
 
 
-import java.io.Console;
-
 /*
     Create a Car class with a constructor that takes a name and year and color
 
-    Create a Dinosaur class that has one method
+    Create a Monster class that has one method
     The method signature should look like this public void EatCar(Car car)
     EatCar should simply log out the name, year, and color of the car.
 
@@ -36,14 +34,17 @@ public class Main {
         lot1.parkCar(car3);
         lot1.parkCar(car4);
 
-        Dinosaur myDinosaur = new Dinosaur("Mini");
-       // myDinosaur.eatCar(car1);
-        //myDinosaur.eatCar(car1);
-        //myDinosaur.eatCar(car2);
-        //myDinosaur.eatCar(car3);
+        Monster myMonster = new Monster("Mini");
+        Mothra myMothra = new Mothra("Mini", "Black");
+       // myMonster.eatCar(car1);
+        //myMonster.eatCar(car1);
+        //myMonster.eatCar(car2);
+        //myMonster.eatCar(car3);
 
-       //myDinosaur.eatCarsFromLot(lot1);
-        myDinosaur.eatCarsFromLot(lot1);
+       //myMonster.eatCarsFromLot(lot1);
+        //myMonster.eatCarsFromLot(lot1);
+        myMothra.eatCar(car1);
+        myMothra.eatCar(car2);
 
 
 
