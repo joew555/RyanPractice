@@ -5,22 +5,39 @@ package com.company;
  */
 public class Mothra extends Monster {
 
-    String wingColor;
 
 
-    public Mothra(String makesILike, String colorOfWings) {
 
-        super(makesILike);
-        wingColor = colorOfWings;
+    public Mothra(int appetite, int health) {
+
+        super(appetite, health);
 
     }
 
-    public void eatCar(Car car){
 
-        if (wingColor == car.carColor){
 
-            super.eatCar(car);
+    public void eatLot(ParkingLot lot){
+
+
+        super.eatCarsFromLot(lot);
+    }
+
+    public void talons(Monster monster){
+
+    for (Car c : super.allCarsEaten) {
+
+        if (monster.monsterHealth > 0) {
+
+            System.out.println("Mothra has killed Godzilla!");
+        } else { monster.monsterHealth = monster.monsterHealth - 1000;
+
+
         }
+
     }
 
 }
+
+}
+
+

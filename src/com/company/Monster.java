@@ -9,13 +9,15 @@ public class Monster {
     private int numCarsEaten = 0;
     ArrayList<Car> allCarsEaten = new ArrayList<Car>();
     ArrayList<Car> matchedCars = new ArrayList<Car>();
-    private String preferredMake;
+    public int monsterAppetite;
     private Car carFromLot;
+    public int monsterHealth;
 
 
-    public Monster(String makesILike){
+    public Monster(int appetite, int health){
 
-        preferredMake = makesILike;
+        monsterAppetite = appetite;
+        monsterHealth = health;
 
     }
 
@@ -75,7 +77,7 @@ public class Monster {
 
         for (Car c : lot.parkedCars) {
 
-            if (c.carMake == preferredMake){
+            if (lot.parkedCars.size() < monsterAppetite){
 
                 matchedCars.add(c);
 

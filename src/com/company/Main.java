@@ -21,21 +21,28 @@ public class Main {
 
     public static void main(String[] args){
 
-        Car car1 = new Car(2015, "Black", "Mini");
-        Car car2 = new Car(2012, "red","VW");
-        Car car3 = new Car(2014, "green", "Subaru");
-        Car car4 = new Car(2016, "gray", "Mini");
-
+        Car car1 = new Car(2015, "Black", "Mini", false);
+        Car car2 = new Car(2012, "red","VW", false);
+        Car car3 = new Car(2014, "green", "Subaru", true);
+        Car car4 = new Car(2016, "gray", "Mini", false);
+        Car car5 = new Car(2015, "gray", "Mini", false);
+        Car car6 = new Car(2014, "gray", "VW", false);
+        Car car7 = new Car(2013, "red", "VW", false);
 
 
         ParkingLot lot1 = new ParkingLot(4);
+        ParkingLot lot2 = new ParkingLot(3);
         lot1.parkCar(car1);
         lot1.parkCar(car2);
         lot1.parkCar(car3);
         lot1.parkCar(car4);
+        lot2.parkCar(car5);
+        lot2.parkCar(car6);
+        lot2.parkCar(car7);
 
-        Monster myMonster = new Monster("Mini");
-        Mothra myMothra = new Mothra("Mini", "Black");
+        //Monster myMonster = new Monster("Mini");
+        Mothra myMothra = new Mothra(3,2000);
+        Godzilla myGodzilla = new Godzilla(4,1000);
        // myMonster.eatCar(car1);
         //myMonster.eatCar(car1);
         //myMonster.eatCar(car2);
@@ -43,9 +50,11 @@ public class Main {
 
        //myMonster.eatCarsFromLot(lot1);
         //myMonster.eatCarsFromLot(lot1);
-        myMothra.eatCar(car1);
-        myMothra.eatCar(car2);
+        myGodzilla.eatLot(lot2);
+        myMothra.eatLot(lot1);
 
+        //myGodzilla.stomp(myMothra);
+        myMothra.talons(myGodzilla);
 
 
 
