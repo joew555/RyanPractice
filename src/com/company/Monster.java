@@ -8,7 +8,6 @@ public class Monster {
     private int i;
     private int numCarsEaten = 0;
     ArrayList<Car> allCarsEaten = new ArrayList<Car>();
-    ArrayList<Car> matchedCars = new ArrayList<Car>();
     public int monsterAppetite;
     private Car carFromLot;
     public int monsterHealth;
@@ -74,22 +73,21 @@ public class Monster {
     }
 
     public void eatCarsFromLot(ParkingLot lot){
+        ArrayList<Car> matchedCars = new ArrayList<Car>();
 
         for (Car c : lot.parkedCars) {
-
-            if (lot.parkedCars.size() < monsterAppetite){
-
+            if (matchedCars.size() < monsterAppetite){
                 matchedCars.add(c);
-
             }
-
         }
 
         eatCars(matchedCars);
         lot.parkedCars.removeAll(matchedCars);
+    }
 
+    public boolean isInvincible(){
 
-
+        return false;
 
     }
 

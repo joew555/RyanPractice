@@ -50,10 +50,10 @@ public class Main {
 
        //myMonster.eatCarsFromLot(lot1);
         //myMonster.eatCarsFromLot(lot1);
-        myGodzilla.eatLot(lot2);
-        myMothra.eatLot(lot1);
+        myGodzilla.eatCarsFromLot(lot2);
+        myMothra.eatCarsFromLot(lot1);
 
-        //myGodzilla.stomp(myMothra);
+        myGodzilla.stomp(myMothra);
         myMothra.talons(myGodzilla);
 
 

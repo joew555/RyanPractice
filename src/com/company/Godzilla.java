@@ -12,25 +12,14 @@ public class Godzilla extends Monster{
     }
 
 
-
-    public void eatLot(ParkingLot lot){
-
-
-        super.eatCarsFromLot(lot);
-    }
-
     public void stomp(Monster monster){
+        if (monster.isInvincible()){
 
-        for (Car c : monster.allCarsEaten){
-
-            if (c.isRusty == true){
-
-                System.out.println("Godzilla can't attack!");
-                return;
-            }
+            System.out.println("Godzilla cannot attack");
+            return;
         }
 
-        for (Car c : super.allCarsEaten) {
+        for (Car c : allCarsEaten) {
 
             if (monster.monsterHealth <= 0) {
 
