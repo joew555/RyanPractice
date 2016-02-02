@@ -93,16 +93,3 @@ public class Monster {
 
 
 }
-
-//        Iterator<Car> iterator = lot.parkedCars.iterator();
-//            while (iterator.hasNext()) {
-//
-//               if (iterator.next().carMake == preferredMake){
-//
-//                   carFromLot = iterator.next();
-//                   eatCar(carFromLot);
-//                   iterator.remove();
-//
-//               }
-//
-//            }
